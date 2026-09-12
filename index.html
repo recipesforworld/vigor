@@ -1,0 +1,770 @@
+troca o link da imagem desse html: <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Men's Health Report: Breakthrough Discovery</title>
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    body {
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+
+      background-color: #ffffff;
+
+      color: #111827;
+
+      line-height: 1.55;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+    /* BARRA SUPERIOR VERMELHA */
+
+    .top-bar {
+
+      background-color: #d00000;
+
+      color: #ffffff;
+
+      text-align: center;
+
+      font-size: 15px;
+
+      font-weight: 800;
+
+      padding: 10px 15px;
+
+      letter-spacing: 0.2px;
+
+    }
+
+    .container {
+
+      max-width: 760px;
+
+      margin: 0 auto;
+
+      background: #ffffff;
+
+      padding: 30px 24px 60px;
+
+    }
+
+    /* TÍTULO PRINCIPAL GRANDE E EM SERIF/GEORGIA */
+
+    h1.main-title {
+
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+
+      font-size: 34px;
+
+      line-height: 1.25;
+
+      color: #111827;
+
+      margin: 15px 0 22px;
+
+      font-weight: 800;
+
+      letter-spacing: -0.5px;
+
+    }
+
+    h1.main-title .highlight-red {
+
+      color: #d00000;
+
+    }
+
+    /* BANNER HERO COM A IMAGEM */
+
+    .hero-box {
+
+      position: relative;
+
+      margin-bottom: 25px;
+
+      border-radius: 8px;
+
+      overflow: hidden;
+
+      background-color: #000;
+
+      cursor: pointer;
+
+    }
+
+    .hero-box img {
+
+      width: 100%;
+
+      height: auto;
+
+      display: block;
+
+    }
+
+    .play-btn-overlay {
+
+      position: absolute;
+
+      top: 50%;
+
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 82px;
+
+      height: 82px;
+
+      background: #d00000;
+
+      border-radius: 50%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+
+    }
+
+    .play-btn-overlay::after {
+
+      content: "";
+
+      display: block;
+
+      width: 0;
+
+      height: 0;
+
+      border-top: 16px solid transparent;
+
+      border-bottom: 16px solid transparent;
+
+      border-left: 26px solid #ffffff;
+
+      margin-left: 5px;
+
+    }
+
+    /* BOTÃO VERDE PRINCIPAL */
+
+    .btn-green {
+
+      display: block;
+
+      width: 100%;
+
+      text-align: center;
+
+      background-color: #22c55e;
+
+      color: #ffffff;
+
+      font-size: 24px;
+
+      font-weight: 900;
+
+      text-decoration: none;
+
+      padding: 20px 24px;
+
+      border-radius: 50px;
+
+      box-shadow: 0 4px 18px rgba(34, 197, 94, 0.4);
+
+      margin: 25px 0 35px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.5px;
+
+      transition: background-color 0.2s, transform 0.1s;
+
+    }
+
+    .btn-green:hover {
+
+      background-color: #16a34a;
+
+      transform: translateY(-2px);
+
+    }
+
+    /* AUTOR / DR. MANDEL */
+
+    .author-box {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 16px;
+
+      margin-bottom: 28px;
+
+      padding-bottom: 22px;
+
+      border-bottom: 1px solid #e5e7eb;
+
+    }
+
+    .author-avatar {
+
+      width: 68px;
+
+      height: 68px;
+
+      border-radius: 50%;
+
+      overflow: hidden;
+
+      flex-shrink: 0;
+
+      background: #cbd5e1;
+
+    }
+
+    .author-avatar img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+    }
+
+    .author-info h4 {
+
+      font-size: 20px;
+
+      color: #111827;
+
+      font-weight: 800;
+
+      margin-bottom: 2px;
+
+    }
+
+    .author-info p {
+
+      font-size: 15px;
+
+      color: #6b7280;
+
+    }
+
+    /* CORPO DE TEXTO */
+
+    .body-text {
+
+      font-size: 19px;
+
+      color: #1f2937;
+
+      margin-bottom: 22px;
+
+      line-height: 1.6;
+
+    }
+
+    .body-text strong {
+
+      color: #111827;
+
+      font-weight: 800;
+
+    }
+
+    .body-text .red-text {
+
+      color: #d00000;
+
+      font-weight: 800;
+
+    }
+
+    /* CAIXA DE AVISO IMPORTANTE */
+
+    .notice-box {
+
+      background-color: #fef9c3;
+
+      border-left: 5px solid #d00000;
+
+      padding: 20px 22px;
+
+      border-radius: 4px;
+
+      margin: 30px 0;
+
+      font-size: 18px;
+
+      color: #713f12;
+
+      line-height: 1.5;
+
+    }
+
+    .notice-box strong {
+
+      color: #854d0e;
+
+      font-weight: 800;
+
+    }
+
+    /* TÍTULOS DE SEÇÃO */
+
+    h2.section-title {
+
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+
+      font-size: 28px;
+
+      color: #111827;
+
+      margin: 36px 0 20px;
+
+      font-weight: 800;
+
+      letter-spacing: -0.3px;
+
+    }
+
+    /* DEPOIMENTOS */
+
+    .testimonial {
+
+      background: #f8fafc;
+
+      border-left: 5px solid #2563eb;
+
+      padding: 18px 20px;
+
+      border-radius: 4px;
+
+      margin-bottom: 20px;
+
+      font-size: 17px;
+
+      color: #334155;
+
+      font-style: italic;
+
+      line-height: 1.55;
+
+    }
+
+    .testimonial span {
+
+      display: block;
+
+      margin-top: 10px;
+
+      font-weight: 800;
+
+      font-style: normal;
+
+      color: #111827;
+
+      font-size: 16px;
+
+    }
+
+    /* LISTA DE CHECKMARKS */
+
+    .discovery-list {
+
+      list-style: none;
+
+      margin: 20px 0 30px;
+
+    }
+
+    .discovery-list li {
+
+      position: relative;
+
+      padding-left: 36px;
+
+      margin-bottom: 16px;
+
+      font-size: 18px;
+
+      color: #1f2937;
+
+      line-height: 1.5;
+
+    }
+
+    .discovery-list li::before {
+
+      content: "✓";
+
+      position: absolute;
+
+      left: 0;
+
+      top: -2px;
+
+      color: #16a34a;
+
+      font-weight: 900;
+
+      font-size: 22px;
+
+    }
+
+    /* AVISO URGENTE */
+
+    .urgent-box {
+
+      background-color: #fef9c3;
+
+      border-radius: 6px;
+
+      padding: 22px;
+
+      margin: 35px 0 25px;
+
+      font-size: 18px;
+
+      color: #713f12;
+
+      line-height: 1.5;
+
+    }
+
+    .urgent-box strong {
+
+      color: #854d0e;
+
+      font-weight: 800;
+
+    }
+
+    /* RODAPÉ */
+
+    .footer-links {
+
+      text-align: center;
+
+      margin-top: 45px;
+
+      padding-top: 25px;
+
+      border-top: 1px solid #e5e7eb;
+
+      font-size: 13px;
+
+      color: #64748b;
+
+    }
+
+    .footer-links a {
+
+      color: #64748b;
+
+      text-decoration: none;
+
+      margin: 0 10px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+    }
+
+    .disclaimer {
+
+      margin-top: 18px;
+
+      font-size: 12px;
+
+      color: #94a3b8;
+
+      text-align: center;
+
+      line-height: 1.5;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <!-- BARRA SUPERIOR VERMELHA -->
+
+  <div class="top-bar">
+
+    Men's Health Report: A Breakthrough Discovery In Natural Male Expansion
+
+  </div>
+
+
+
+  <div class="container">
+
+    
+
+    <!-- TÍTULO PRINCIPAL (TAMANHO GRANDE & GEORGIA) -->
+
+    <h1 class="main-title">
+
+      The <span class="highlight-red">“13-Second Horse Gelatin”</span> Routine That Gives Men Their Johnson Back & Adds Up To <span class="highlight-red">3.8 Extra Inches</span>
+
+    </h1>
+
+
+
+    <!-- ÁREA DA IMAGEM OFICIAL COM PLAY -->
+
+    <a href="https://vigorhorse.com/funnelb3/VHGT-L1-03/?aff_id=1022" target="_blank" style="text-decoration: none;">
+
+      <div class="hero-box">
+
+        <img src="https://i.ibb.co/Q7MNF41c/Hand-dipping-banana-into-gelatin-202608270301.jpg" alt="Hand dipping banana into horse gelatin trick">
+
+        <div class="play-btn-overlay"></div>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- BOTÃO PRINCIPAL VERDE -->
+
+    <a href="https://vigorhorse.com/funnelb3/VHGT-L1-03/?aff_id=1022" class="btn-green" target="_blank">
+
+      WATCH THE VIDEO NOW
+
+    </a>
+
+
+
+    <!-- AUTOR / MÉDICO (DR. MANDEL) -->
+
+    <div class="author-box">
+
+      <div class="author-avatar">
+
+        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=200&q=80" alt="Dr. Mandel">
+
+      </div>
+
+      <div class="author-info">
+
+        <h4>By Dr. Mandel</h4>
+
+        <p>Men's Virility & Tissue Restoration Specialist</p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CORPO DO TEXTO -->
+
+    <p class="body-text">
+
+      For decades, millions of men have been told that a lack of <strong>firmness</strong>, declining stamina, and lost size are merely unavoidable side effects of aging or bad genetics.
+
+    </p>
+
+
+
+    <p class="body-text">
+
+      Men are constantly pressured into buying temporary blue pills, painful vacuum devices, or dangerous procedures that fail to fix the root cause — while the true culprit behind why cavernous tissue stops expanding is hidden from the public.
+
+    </p>
+
+
+
+    <p class="body-text">
+
+      In this leaked presentation, Dr. Mandel exposes how silent dietary toxins trigger severe internal stiffness in 93% of men, and reveals the exact <span class="red-text">13-second equine hydrolyzed routine</span> designed to break down hardened tissue and trigger natural expansion.
+
+    </p>
+
+
+
+    <p class="body-text">
+
+      The secret lies in the elastic structure of the corpus cavernosum:
+
+    </p>
+
+
+
+    <p class="body-text">
+
+      When healthy elastic fibers are replaced by dense, fibrotic tissue, blood flow becomes completely restricted. By restoring this underlying elasticity, the tissue unlocks its full capacity to expand, harden, and retain substantial new growth.
+
+    </p>
+
+
+
+    <p class="body-text">
+
+      Discover why thousands of everyday men over 40 are ditching conventional pills and using this natural protocol at home.
+
+    </p>
+
+
+
+    <!-- CAIXA DE AVISO IMPORTANTE -->
+
+    <div class="notice-box">
+
+      <strong>Important Note:</strong> This is not an ordinary supplement pitch, pump, or risky medical trick. This private briefing breaks down the exact 9-compound synergy behind equine collagen and why Big Pharma fought so hard to keep this formula offline.
+
+    </div>
+
+
+
+    <!-- SEÇÃO DE DEPOIMENTOS -->
+
+    <h2 class="section-title">Verified Feedback From Viewers</h2>
+
+
+
+    <div class="testimonial">
+
+      “I felt completely helpless in the bedroom after turning 50. The scientific breakdown about tissue elasticity changed everything for me. In just 3 weeks, my morning wood came back harder than steel and the added size blew my wife away.”
+
+      <span>— Kevin C., 58</span>
+
+    </div>
+
+
+
+    <div class="testimonial">
+
+      “I honestly thought horse collagen was just another gimmick. But within 18 days of using this protocol, I measured a full 3.2-inch gain. My confidence is through the roof.”
+
+      <span>— Mr. Mitchell, 63</span>
+
+    </div>
+
+
+
+    <div class="testimonial">
+
+      “Our sex life was practically non-existent. After my husband started this routine, he gained over 4 inches and lasts easily over 45 minutes every single night. It saved our relationship.”
+
+      <span>— Sarah & Richard M., 49</span>
+
+    </div>
+
+
+
+    <!-- LISTA DE DESCOBERTAS -->
+
+    <h2 class="section-title">What You Will Discover In This Free Video:</h2>
+
+    <p class="body-text">In this uncensored presentation, you will see step-by-step how to reactivate masculine growth genes safely at home:</p>
+
+
+
+    <ul class="discovery-list">
+
+      <li>The real reason conventional pills only provide a temporary fix without solving tissue stiffness.</li>
+
+      <li>How toxic agricultural residues secretly calcify and harden the corpus cavernosum over time.</li>
+
+      <li>The 13-second equine collagen routine that softens internal tissue and reactivates growth.</li>
+
+      <li>The precise 9 synergistic cofactors that amplify nitric oxide and supercharge free testosterone.</li>
+
+      <li>Why adult film actors and elite veterinarians have quietly relied on this method for decades.</li>
+
+      <li>How regular men are gaining between 2.5 to 4 extra inches safely without prescriptions.</li>
+
+    </ul>
+
+
+
+    <!-- AVISO URGENTE -->
+
+    <div class="urgent-box">
+
+      ⚠️ <strong>URGENT NOTICE:</strong> Because this natural discovery poses a direct threat to the multi-billion-dollar prescription industry, aggressive attempts are being made to take down this presentation. Watch it now while the secure server link is active.
+
+    </div>
+
+
+
+    <!-- BOTÃO FINAL VERDE -->
+
+    <a href="https://vigorhorse.com/funnelb3/VHGT-L1-03/?aff_id=1022" class="btn-green" target="_blank">
+
+      CLICK HERE TO WATCH THE VIDEO
+
+    </a>
+
+
+
+    <!-- RODAPÉ -->
+
+    <div class="footer-links">
+
+      <a href="#">Contact Us</a>
+
+      <a href="#">Terms of Use</a>
+
+      <a href="#">Privacy Policy</a>
+
+      <a href="#">Disclaimer</a>
+
+    </div>
+
+
+
+    <p class="disclaimer">
+
+      The information provided on this website is for educational and informational purposes only and is not intended as medical advice. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary based on individual physiological response.
+
+    </p>
+
+
+
+  </div>
+
+
+
+</body>
+
+</html> para esse: <a href="https://ibb.co/QjtWb5yv"><img src="https://i.ibb.co/n8tXgWxM/Hand-dipping-banana-into-gelatin-202608270301.jpg" alt="Hand-dipping-banana-into-gelatin-202608270301" border="0"></a> 
+
